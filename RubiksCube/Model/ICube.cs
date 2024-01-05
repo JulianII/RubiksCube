@@ -11,7 +11,6 @@ namespace RubiksCube
         public bool CubeCompleted();
         public void MoveLeft(int i);
         public void MoveUp(int i);
-        public IFace[] Faces { get; }
 
     }
 }

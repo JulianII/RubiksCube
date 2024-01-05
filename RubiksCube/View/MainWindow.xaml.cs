@@ -21,12 +21,11 @@ namespace RubiksCube
     /// </summary>
     public partial class MainWindow : Window
     {
-
         public MainWindow()
         {
             InitializeComponent();
 
-            ViewModel vm = new ViewModel(new Cube6Sided3by3(new Plate()));
+            ViewModel vm = new ViewModel(new Cube3by3(new Plate()));
             DataContext = vm;
         }
 

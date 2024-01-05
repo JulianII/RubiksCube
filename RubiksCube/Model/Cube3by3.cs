@@ -8,11 +8,9 @@ using System.Windows.Media;
 
 namespace RubiksCube
 {
-    internal class Cube6Sided3by3 : ICube
+    internal class Cube3by3 : ICube
     {
         public string test;
-
-        public IFace[] Faces { get; }
 
         public IFace FrontFace { get; private set; }
         public IFace BackFace { get; private set; }
@@ -23,7 +21,7 @@ namespace RubiksCube
         public IFace TopFace { get; private set; }
         public IFace BottomFace { get; private set; }
 
-        public Cube6Sided3by3 (Plate p)
+        public Cube3by3 (Plate p)
         {
             test = "Hier steht was";
 
