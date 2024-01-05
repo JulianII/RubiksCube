@@ -1,0 +1,5 @@
+?? Bindings funktionieren nicht
+?? Ist viewmodel meine gamelogik?
+
+TODO
+	Am Cube anmelden und wenn er fertig ist beobachten anstatt boolean funktion.
