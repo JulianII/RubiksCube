@@ -29,6 +29,16 @@ namespace RubiksCube
             }
         }
 
+        public Face()
+        {
+            Plates = new ObservableCollection<Brush>();
+
+            for (int i = 0; i < 9; ++i)
+            {
+                Plates.Add(new SolidColorBrush(Color.FromArgb(255,255,255,255)));
+            }
+        }
+
         public Brush GetPlate(int i)
         {
             if (i > Plates.Count) throw new ArgumentOutOfRangeException();

@@ -24,7 +24,13 @@ namespace RubiksCube
         public ViewModel(Cube cube) 
         {
             C = cube;
-            c = sm.Load();
+            C = sm.Load();
+
+            if (C == null) { 
+                C = new Cube(); 
+                C.Randomize();
+                sm.Save(C);
+            }
         }
 
         [RelayCommand]

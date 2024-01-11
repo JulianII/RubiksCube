@@ -57,17 +57,22 @@ namespace RubiksCube.Model
         {
             Cube c = new Cube();
 
-            string fileContent = File.ReadAllText(path);
-            string[] output = fileContent.Split(";");
+            try
+            {
+                string fileContent = File.ReadAllText(path);
+                string[] output = fileContent.Split(";");
 
-            for (int i = 0; i < 9; ++i) c.FrontFace.SetPlateColor   (i, new SolidColorBrush((Color)ColorConverter.ConvertFromString(output[i + 9 * 0])));
-            for (int i = 0; i < 9; ++i) c.BackFace.SetPlateColor    (i, new SolidColorBrush((Color)ColorConverter.ConvertFromString(output[i + 9 * 1])));
+                for (int i = 0; i < 9; ++i) c.FrontFace.SetPlateColor(i, new SolidColorBrush((Color)ColorConverter.ConvertFromString(output[i + 9 * 0])));
+                for (int i = 0; i < 9; ++i) c.BackFace.SetPlateColor(i, new SolidColorBrush((Color)ColorConverter.ConvertFromString(output[i + 9 * 1])));
 
-            for (int i = 0; i < 9; ++i) c.LeftFace.SetPlateColor    (i, new SolidColorBrush((Color)ColorConverter.ConvertFromString(output[i + 9 * 2])));
-            for (int i = 0; i < 9; ++i) c.RightFace.SetPlateColor   (i, new SolidColorBrush((Color)ColorConverter.ConvertFromString(output[i + 9 * 3])));
+                for (int i = 0; i < 9; ++i) c.LeftFace.SetPlateColor(i, new SolidColorBrush((Color)ColorConverter.ConvertFromString(output[i + 9 * 2])));
+                for (int i = 0; i < 9; ++i) c.RightFace.SetPlateColor(i, new SolidColorBrush((Color)ColorConverter.ConvertFromString(output[i + 9 * 3])));
 
-            for (int i = 0; i < 9; ++i) c.TopFace.SetPlateColor     (i, new SolidColorBrush((Color)ColorConverter.ConvertFromString(output[i + 9 * 4])));
-            for (int i = 0; i < 9; ++i) c.BottomFace.SetPlateColor  (i, new SolidColorBrush((Color)ColorConverter.ConvertFromString(output[i + 9 * 5])));
+                for (int i = 0; i < 9; ++i) c.TopFace.SetPlateColor(i, new SolidColorBrush((Color)ColorConverter.ConvertFromString(output[i + 9 * 4])));
+                for (int i = 0; i < 9; ++i) c.BottomFace.SetPlateColor(i, new SolidColorBrush((Color)ColorConverter.ConvertFromString(output[i + 9 * 5])));
+            } catch { 
+                c = null;
+            }
 
             return c;
         }
