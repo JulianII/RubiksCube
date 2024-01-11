@@ -57,7 +57,8 @@ namespace RubiksCube
 
         public void MoveLeft(int row)
         {
-            Face temp = FrontFace;
+            Face temp = new Face(Color.FromRgb(0,0,0));
+            for (int i = 0; i < 3; ++i) temp.SetPlateColor(row * 3 + i, FrontFace.GetPlate(row * 3 + i));
 
             for (int i = 0; i < 3; ++i) FrontFace.SetPlateColor(row * 3 + i, RightFace.GetPlate(row * 3 + i));
             for (int i = 0; i < 3; ++i) RightFace.SetPlateColor(row * 3 + i, BackFace.GetPlate(row * 3 + i));
@@ -67,17 +68,19 @@ namespace RubiksCube
 
         public void MoveUp(int column)
         {
-            Face temp = FrontFace;
+            Face temp = new Face(Color.FromRgb(0, 0, 0));
+            for (int i = 0; i < 3; ++i) temp.SetPlateColor(i * 3 + column, FrontFace.GetPlate(i * 3 + column));
 
-            for (int i = 0; i < 3; ++i) FrontFace.SetPlateColor(column * 3 + i, BottomFace.GetPlate(column * 3 + i));
-            for (int i = 0; i < 3; ++i) BottomFace.SetPlateColor(column * 3 + i, BackFace.GetPlate(column * 3 + i));
-            for (int i = 0; i < 3; ++i) BackFace.SetPlateColor(column * 3 + i,  TopFace.GetPlate(column * 3 + i));
-            for (int i = 0; i < 3; ++i) TopFace.SetPlateColor(column * 3 + i,  temp.GetPlate(column * 3 + i));
+            for (int i = 0; i < 3; ++i) FrontFace.SetPlateColor(i * 3 + column, BottomFace.GetPlate(i * 3 + column));
+            for (int i = 0; i < 3; ++i) BottomFace.SetPlateColor(i * 3 + column, BackFace.GetPlate(i * 3 + column));
+            for (int i = 0; i < 3; ++i) BackFace.SetPlateColor(i * 3 + column,  TopFace.GetPlate(i * 3 + column));
+            for (int i = 0; i < 3; ++i) TopFace.SetPlateColor(i * 3 + column,  temp.GetPlate(i * 3 + column));
         }
 
         public void MoveRight(int row)
         {
-            Face temp = FrontFace;
+            Face temp = new Face(Color.FromRgb(0, 0, 0));
+            for (int i = 0; i < 3; ++i) temp.SetPlateColor(row * 3 + i, FrontFace.GetPlate(row * 3 + i));
 
             for (int i = 0; i < 3; ++i) FrontFace.SetPlateColor(row * 3 + i, LeftFace.GetPlate(row * 3 + i));
             for (int i = 0; i < 3; ++i) LeftFace.SetPlateColor(row * 3 + i, BackFace.GetPlate(row * 3 + i));
@@ -87,12 +90,13 @@ namespace RubiksCube
 
         public void MoveDown(int column)
         {
-            Face temp = FrontFace;
+            Face temp = new Face(Color.FromRgb(0, 0, 0));
+            for (int i = 0; i < 3; ++i) temp.SetPlateColor(i * 3 + column, FrontFace.GetPlate(i * 3 + column));
 
-            for (int i = 0; i < 3; ++i) FrontFace.SetPlateColor(column * 3 + i, TopFace.GetPlate(column * 3 + i));
-            for (int i = 0; i < 3; ++i) TopFace.SetPlateColor(column * 3 + i, BackFace.GetPlate(column * 3 + i));
-            for (int i = 0; i < 3; ++i) BackFace.SetPlateColor(column * 3 + i, BottomFace.GetPlate(column * 3 + i));
-            for (int i = 0; i < 3; ++i) BottomFace.SetPlateColor(column * 3 + i, temp.GetPlate(column * 3 + i));
+            for (int i = 0; i < 3; ++i) FrontFace.SetPlateColor(i * 3 + column, TopFace.GetPlate(i * 3 + column));
+            for (int i = 0; i < 3; ++i) TopFace.SetPlateColor(i * 3 + column, BackFace.GetPlate(i * 3 + column));
+            for (int i = 0; i < 3; ++i) BackFace.SetPlateColor(i * 3 + column, BottomFace.GetPlate(i * 3 + column));
+            for (int i = 0; i < 3; ++i) BottomFace.SetPlateColor(i * 3 + column, temp.GetPlate(i * 3 + column));
         }
     }
 }

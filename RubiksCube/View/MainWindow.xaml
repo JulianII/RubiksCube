@@ -72,15 +72,15 @@
         <Rectangle Grid.Column="7" Grid.Row="7" Fill="{Binding C.FrontFace.Plates[7]}"/>
         <Rectangle Grid.Column="8" Grid.Row="7" Fill="{Binding C.FrontFace.Plates[8]}"/>
 
-        <Rectangle Grid.Column="6" Grid.Row="9" Fill="{Binding C.BottomFace.Plates[0]}"/>
-        <Rectangle Grid.Column="7" Grid.Row="9" Fill="{Binding C.BottomFace.Plates[1]}"/>
-        <Rectangle Grid.Column="8" Grid.Row="9" Fill="{Binding C.BottomFace.Plates[2]}"/>
+        <Rectangle Grid.Column="6" Grid.Row="9" Fill="{Binding C.BottomFace.Plates[6]}"/>
+        <Rectangle Grid.Column="7" Grid.Row="9" Fill="{Binding C.BottomFace.Plates[7]}"/>
+        <Rectangle Grid.Column="8" Grid.Row="9" Fill="{Binding C.BottomFace.Plates[8]}"/>
         <Rectangle Grid.Column="6" Grid.Row="10" Fill="{Binding C.BottomFace.Plates[3]}"/>
         <Rectangle Grid.Column="7" Grid.Row="10" Fill="{Binding C.BottomFace.Plates[4]}"/>
         <Rectangle Grid.Column="8" Grid.Row="10" Fill="{Binding C.BottomFace.Plates[5]}"/>
-        <Rectangle Grid.Column="6" Grid.Row="11" Fill="{Binding C.BottomFace.Plates[6]}"/>
-        <Rectangle Grid.Column="7" Grid.Row="11" Fill="{Binding C.BottomFace.Plates[7]}"/>
-        <Rectangle Grid.Column="8" Grid.Row="11" Fill="{Binding C.BottomFace.Plates[8]}"/>
+        <Rectangle Grid.Column="6" Grid.Row="11" Fill="{Binding C.BottomFace.Plates[0]}"/>
+        <Rectangle Grid.Column="7" Grid.Row="11" Fill="{Binding C.BottomFace.Plates[1]}"/>
+        <Rectangle Grid.Column="8" Grid.Row="11" Fill="{Binding C.BottomFace.Plates[2]}"/>
 
         <Rectangle Grid.Column="6" Grid.Row="12" Fill="{Binding C.BackFace.Plates[6]}"/>
         <Rectangle Grid.Column="7" Grid.Row="12" Fill="{Binding C.BackFace.Plates[7]}"/>
@@ -116,18 +116,16 @@
         <Button Grid.Column="7" Grid.Row="4" Command="{Binding MoveUpCommand}" CommandParameter="1"/>
         <Button Grid.Column="8" Grid.Row="4" Command="{Binding MoveUpCommand}" CommandParameter="2"/>
 
-        <Button Grid.Column="5" Grid.Row="5"/>
-        <Button Grid.Column="5" Grid.Row="6"/>
-        <Button Grid.Column="5" Grid.Row="7"/>
+        <Button Grid.Column="5" Grid.Row="5" Command="{Binding MoveLeftCommand}" CommandParameter="0"/>
+        <Button Grid.Column="5" Grid.Row="6" Command="{Binding MoveLeftCommand}" CommandParameter="1"/>
+        <Button Grid.Column="5" Grid.Row="7" Command="{Binding MoveLeftCommand}" CommandParameter="2"/>
 
-        <Button Grid.Column="9" Grid.Row="5"/>
-        <Button Grid.Column="9" Grid.Row="6"/>
-        <Button Grid.Column="9" Grid.Row="7"/>
-        
-        <Button Grid.Column="6" Grid.Row="8"/>
-        <Button Grid.Column="7" Grid.Row="8"/>
-        <Button Grid.Column="8" Grid.Row="8"/>
+        <Button Grid.Column="9" Grid.Row="5" Command="{Binding MoveRightCommand}" CommandParameter="0"/>
+        <Button Grid.Column="9" Grid.Row="6" Command="{Binding MoveRightCommand}" CommandParameter="1"/>
+        <Button Grid.Column="9" Grid.Row="7" Command="{Binding MoveRightCommand}" CommandParameter="2"/>
 
-
+        <Button Grid.Column="6" Grid.Row="8" Command="{Binding MoveDownCommand}" CommandParameter="0"/>
+        <Button Grid.Column="7" Grid.Row="8" Command="{Binding MoveDownCommand}" CommandParameter="1"/>
+        <Button Grid.Column="8" Grid.Row="8" Command="{Binding MoveDownCommand}" CommandParameter="2"/>
     </Grid>
 </Window>

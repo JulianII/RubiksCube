@@ -19,7 +19,6 @@ namespace RubiksCube
         public ViewModel(Cube cube) 
         {
             C = cube;
-            C.MoveUp(0);
         }
 
         [RelayCommand]
