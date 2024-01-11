@@ -7,20 +7,14 @@ using System.Threading.Tasks;
 using System.Numerics;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace RubiksCube
 {
-    internal class Face : INotifyPropertyChanged
+    internal partial class Face : ObservableObject
     {
-        private Brush[] _plates;
-        public Brush[] Plates { 
-            get { return _plates; }
-            set
-            {
-                _plates = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Plates)));
-            }
-        }
+        [ObservableProperty]
+        private Brush[] plates;
 
         public Face(Color c)
         {
@@ -53,12 +47,6 @@ namespace RubiksCube
                 if (Plates[i] != Plates[i+1]) return false;
             }
             return true;
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void NotifyPropertyChanged([CallerMemberName] string name = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
     }
 }
