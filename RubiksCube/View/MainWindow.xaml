@@ -51,68 +51,70 @@
             <RowDefinition Height="30" />
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
-        
-        <Rectangle Grid.Column="6" Grid.Row="1" Fill="{Binding TopFace.Plates[0]}"/>
-        <Rectangle Grid.Column="7" Grid.Row="1" Fill="{Binding TopFace.Plates[1]}"/>
-        <Rectangle Grid.Column="8" Grid.Row="1" Fill="{Binding TopFace.Plates[2]}"/>
-        <Rectangle Grid.Column="6" Grid.Row="2" Fill="{Binding TopFace.Plates[3]}"/>
-        <Rectangle Grid.Column="7" Grid.Row="2" Fill="{Binding TopFace.Plates[4]}"/>
-        <Rectangle Grid.Column="8" Grid.Row="2" Fill="{Binding TopFace.Plates[5]}"/>
-        <Rectangle Grid.Column="6" Grid.Row="3" Fill="{Binding TopFace.Plates[6]}"/>
-        <Rectangle Grid.Column="7" Grid.Row="3" Fill="{Binding TopFace.Plates[7]}"/>
-        <Rectangle Grid.Column="8" Grid.Row="3" Fill="{Binding TopFace.Plates[8]}"/>
 
-        <Rectangle Grid.Column="6" Grid.Row="5" Fill="{Binding FrontFace.Plates[0]}"/>
-        <Rectangle Grid.Column="7" Grid.Row="5" Fill="{Binding FrontFace.Plates[1]}"/>
-        <Rectangle Grid.Column="8" Grid.Row="5" Fill="{Binding FrontFace.Plates[2]}"/>
-        <Rectangle Grid.Column="6" Grid.Row="6" Fill="{Binding FrontFace.Plates[3]}"/>
-        <Rectangle Grid.Column="7" Grid.Row="6" Fill="{Binding FrontFace.Plates[4]}"/>
-        <Rectangle Grid.Column="8" Grid.Row="6" Fill="{Binding FrontFace.Plates[5]}"/>
-        <Rectangle Grid.Column="6" Grid.Row="7" Fill="{Binding FrontFace.Plates[6]}"/>
-        <Rectangle Grid.Column="7" Grid.Row="7" Fill="{Binding FrontFace.Plates[7]}"/>
-        <Rectangle Grid.Column="8" Grid.Row="7" Fill="{Binding FrontFace.Plates[8]}"/>
+        <Rectangle Grid.Column="5" Grid.Row="1" Fill="{Binding C.TopFace.Plates[0], Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
-        <Rectangle Grid.Column="6" Grid.Row="9" Fill="{Binding BottomFace.Plates[0]}"/>
-        <Rectangle Grid.Column="7" Grid.Row="9" Fill="{Binding BottomFace.Plates[1]}"/>
-        <Rectangle Grid.Column="8" Grid.Row="9" Fill="{Binding BottomFace.Plates[2]}"/>
-        <Rectangle Grid.Column="6" Grid.Row="10" Fill="{Binding BottomFace.Plates[3]}"/>
-        <Rectangle Grid.Column="7" Grid.Row="10" Fill="{Binding BottomFace.Plates[4]}"/>
-        <Rectangle Grid.Column="8" Grid.Row="10" Fill="{Binding BottomFace.Plates[5]}"/>
-        <Rectangle Grid.Column="6" Grid.Row="11" Fill="{Binding BottomFace.Plates[6]}"/>
-        <Rectangle Grid.Column="7" Grid.Row="11" Fill="{Binding BottomFace.Plates[7]}"/>
-        <Rectangle Grid.Column="8" Grid.Row="11" Fill="{Binding BottomFace.Plates[8]}"/>
+        <Rectangle Grid.Column="6" Grid.Row="1" Fill="{Binding C.TopFace.Plates[0]}"/>
+        <Rectangle Grid.Column="7" Grid.Row="1" Fill="{Binding C.TopFace.Plates[1]}"/>
+        <Rectangle Grid.Column="8" Grid.Row="1" Fill="{Binding C.TopFace.Plates[2]}"/>
+        <Rectangle Grid.Column="6" Grid.Row="2" Fill="{Binding C.TopFace.Plates[3]}"/>
+        <Rectangle Grid.Column="7" Grid.Row="2" Fill="{Binding C.TopFace.Plates[4]}"/>
+        <Rectangle Grid.Column="8" Grid.Row="2" Fill="{Binding C.TopFace.Plates[5]}"/>
+        <Rectangle Grid.Column="6" Grid.Row="3" Fill="{Binding C.TopFace.Plates[6]}"/>
+        <Rectangle Grid.Column="7" Grid.Row="3" Fill="{Binding C.TopFace.Plates[7]}"/>
+        <Rectangle Grid.Column="8" Grid.Row="3" Fill="{Binding C.TopFace.Plates[8]}"/>
 
-        <Rectangle Grid.Column="6" Grid.Row="12" Fill="{Binding BackFace.Plates[6]}"/>
-        <Rectangle Grid.Column="7" Grid.Row="12" Fill="{Binding BackFace.Plates[7]}"/>
-        <Rectangle Grid.Column="8" Grid.Row="12" Fill="{Binding BackFace.Plates[8]}"/>
-        <Rectangle Grid.Column="6" Grid.Row="13" Fill="{Binding BackFace.Plates[3]}"/>
-        <Rectangle Grid.Column="7" Grid.Row="13" Fill="{Binding BackFace.Plates[4]}"/>
-        <Rectangle Grid.Column="8" Grid.Row="13" Fill="{Binding BackFace.Plates[5]}"/>
-        <Rectangle Grid.Column="6" Grid.Row="14" Fill="{Binding BackFace.Plates[0]}"/>
-        <Rectangle Grid.Column="7" Grid.Row="14" Fill="{Binding BackFace.Plates[1]}"/>
-        <Rectangle Grid.Column="8" Grid.Row="14" Fill="{Binding BackFace.Plates[2]}"/>
+        <Rectangle Grid.Column="6" Grid.Row="5" Fill="{Binding C.FrontFace.Plates[0]}"/>
+        <Rectangle Grid.Column="7" Grid.Row="5" Fill="{Binding C.FrontFace.Plates[1]}"/>
+        <Rectangle Grid.Column="8" Grid.Row="5" Fill="{Binding C.FrontFace.Plates[2]}"/>
+        <Rectangle Grid.Column="6" Grid.Row="6" Fill="{Binding C.FrontFace.Plates[3]}"/>
+        <Rectangle Grid.Column="7" Grid.Row="6" Fill="{Binding C.FrontFace.Plates[4]}"/>
+        <Rectangle Grid.Column="8" Grid.Row="6" Fill="{Binding C.FrontFace.Plates[5]}"/>
+        <Rectangle Grid.Column="6" Grid.Row="7" Fill="{Binding C.FrontFace.Plates[6]}"/>
+        <Rectangle Grid.Column="7" Grid.Row="7" Fill="{Binding C.FrontFace.Plates[7]}"/>
+        <Rectangle Grid.Column="8" Grid.Row="7" Fill="{Binding C.FrontFace.Plates[8]}"/>
 
-        <Rectangle Grid.Column="2" Grid.Row="5" Fill="{Binding LeftFace.Plates[0]}"/>
-        <Rectangle Grid.Column="3" Grid.Row="5" Fill="{Binding LeftFace.Plates[1]}"/>
-        <Rectangle Grid.Column="4" Grid.Row="5" Fill="{Binding LeftFace.Plates[2]}"/>
-        <Rectangle Grid.Column="2" Grid.Row="6" Fill="{Binding LeftFace.Plates[3]}"/>
-        <Rectangle Grid.Column="3" Grid.Row="6" Fill="{Binding LeftFace.Plates[4]}"/>
-        <Rectangle Grid.Column="4" Grid.Row="6" Fill="{Binding LeftFace.Plates[5]}"/>
-        <Rectangle Grid.Column="2" Grid.Row="7" Fill="{Binding LeftFace.Plates[6]}"/>
-        <Rectangle Grid.Column="3" Grid.Row="7" Fill="{Binding LeftFace.Plates[7]}"/>
-        <Rectangle Grid.Column="4" Grid.Row="7" Fill="{Binding LeftFace.Plates[8]}"/>
+        <Rectangle Grid.Column="6" Grid.Row="9" Fill="{Binding C.BottomFace.Plates[0]}"/>
+        <Rectangle Grid.Column="7" Grid.Row="9" Fill="{Binding C.BottomFace.Plates[1]}"/>
+        <Rectangle Grid.Column="8" Grid.Row="9" Fill="{Binding C.BottomFace.Plates[2]}"/>
+        <Rectangle Grid.Column="6" Grid.Row="10" Fill="{Binding C.BottomFace.Plates[3]}"/>
+        <Rectangle Grid.Column="7" Grid.Row="10" Fill="{Binding C.BottomFace.Plates[4]}"/>
+        <Rectangle Grid.Column="8" Grid.Row="10" Fill="{Binding C.BottomFace.Plates[5]}"/>
+        <Rectangle Grid.Column="6" Grid.Row="11" Fill="{Binding C.BottomFace.Plates[6]}"/>
+        <Rectangle Grid.Column="7" Grid.Row="11" Fill="{Binding C.BottomFace.Plates[7]}"/>
+        <Rectangle Grid.Column="8" Grid.Row="11" Fill="{Binding C.BottomFace.Plates[8]}"/>
 
-        <Rectangle Grid.Column="10" Grid.Row="5" Fill="{Binding RightFace.Plates[0]}"/>
-        <Rectangle Grid.Column="11" Grid.Row="5" Fill="{Binding RightFace.Plates[1]}"/>
-        <Rectangle Grid.Column="12" Grid.Row="5" Fill="{Binding RightFace.Plates[2]}"/>
-        <Rectangle Grid.Column="10" Grid.Row="6" Fill="{Binding RightFace.Plates[3]}"/>
-        <Rectangle Grid.Column="11" Grid.Row="6" Fill="{Binding RightFace.Plates[4]}"/>
-        <Rectangle Grid.Column="12" Grid.Row="6" Fill="{Binding RightFace.Plates[5]}"/>
-        <Rectangle Grid.Column="10" Grid.Row="7" Fill="{Binding RightFace.Plates[6]}"/>
-        <Rectangle Grid.Column="11" Grid.Row="7" Fill="{Binding RightFace.Plates[7]}"/>
-        <Rectangle Grid.Column="12" Grid.Row="7" Fill="{Binding RightFace.Plates[8]}"/>
+        <Rectangle Grid.Column="6" Grid.Row="12" Fill="{Binding C.BackFace.Plates[6]}"/>
+        <Rectangle Grid.Column="7" Grid.Row="12" Fill="{Binding C.BackFace.Plates[7]}"/>
+        <Rectangle Grid.Column="8" Grid.Row="12" Fill="{Binding C.BackFace.Plates[8]}"/>
+        <Rectangle Grid.Column="6" Grid.Row="13" Fill="{Binding C.BackFace.Plates[3]}"/>
+        <Rectangle Grid.Column="7" Grid.Row="13" Fill="{Binding C.BackFace.Plates[4]}"/>
+        <Rectangle Grid.Column="8" Grid.Row="13" Fill="{Binding C.BackFace.Plates[5]}"/>
+        <Rectangle Grid.Column="6" Grid.Row="14" Fill="{Binding C.BackFace.Plates[0]}"/>
+        <Rectangle Grid.Column="7" Grid.Row="14" Fill="{Binding C.BackFace.Plates[1]}"/>
+        <Rectangle Grid.Column="8" Grid.Row="14" Fill="{Binding C.BackFace.Plates[2]}"/>
 
-        <Button Grid.Column="6" Grid.Row="4"/>
+        <Rectangle Grid.Column="2" Grid.Row="5" Fill="{Binding C.LeftFace.Plates[0]}"/>
+        <Rectangle Grid.Column="3" Grid.Row="5" Fill="{Binding C.LeftFace.Plates[1]}"/>
+        <Rectangle Grid.Column="4" Grid.Row="5" Fill="{Binding C.LeftFace.Plates[2]}"/>
+        <Rectangle Grid.Column="2" Grid.Row="6" Fill="{Binding C.LeftFace.Plates[3]}"/>
+        <Rectangle Grid.Column="3" Grid.Row="6" Fill="{Binding C.LeftFace.Plates[4]}"/>
+        <Rectangle Grid.Column="4" Grid.Row="6" Fill="{Binding C.LeftFace.Plates[5]}"/>
+        <Rectangle Grid.Column="2" Grid.Row="7" Fill="{Binding C.LeftFace.Plates[6]}"/>
+        <Rectangle Grid.Column="3" Grid.Row="7" Fill="{Binding C.LeftFace.Plates[7]}"/>
+        <Rectangle Grid.Column="4" Grid.Row="7" Fill="{Binding C.LeftFace.Plates[8]}"/>
+
+        <Rectangle Grid.Column="10" Grid.Row="5" Fill="{Binding C.RightFace.Plates[0]}"/>
+        <Rectangle Grid.Column="11" Grid.Row="5" Fill="{Binding C.RightFace.Plates[1]}"/>
+        <Rectangle Grid.Column="12" Grid.Row="5" Fill="{Binding C.RightFace.Plates[2]}"/>
+        <Rectangle Grid.Column="10" Grid.Row="6" Fill="{Binding C.RightFace.Plates[3]}"/>
+        <Rectangle Grid.Column="11" Grid.Row="6" Fill="{Binding C.RightFace.Plates[4]}"/>
+        <Rectangle Grid.Column="12" Grid.Row="6" Fill="{Binding C.RightFace.Plates[5]}"/>
+        <Rectangle Grid.Column="10" Grid.Row="7" Fill="{Binding C.RightFace.Plates[6]}"/>
+        <Rectangle Grid.Column="11" Grid.Row="7" Fill="{Binding C.RightFace.Plates[7]}"/>
+        <Rectangle Grid.Column="12" Grid.Row="7" Fill="{Binding C.RightFace.Plates[8]}"/>
+
+        <Button Grid.Column="6" Grid.Row="4" Command="{Binding MoveUpCommand}"/>
         <Button Grid.Column="7" Grid.Row="4"/>
         <Button Grid.Column="8" Grid.Row="4"/>
 

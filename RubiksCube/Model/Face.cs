@@ -11,10 +11,19 @@ using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace RubiksCube
 {
-    internal partial class Face : ObservableObject
+    internal partial class Face : INotifyPropertyChanged
     {
-        [ObservableProperty]
+
         private Brush[] plates;
+        public Brush[] Plates
+        {
+            get { return plates; }
+            set
+            {
+                plates = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Plates)));
+            }
+        }
 
         public Face(Color c)
         {
@@ -38,15 +47,22 @@ namespace RubiksCube
             if (i > Plates.Length) throw new ArgumentOutOfRangeException();
 
             Plates[i] = b;
+            NotifyPropertyChanged();
         }
 
         public bool FaceCompleted()
         {
-            for(int i = 0; i < 8; ++i) 
+            for (int i = 0; i < 8; ++i)
             {
-                if (Plates[i] != Plates[i+1]) return false;
+                if (Plates[i] != Plates[i + 1]) return false;
             }
             return true;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void NotifyPropertyChanged([CallerMemberName] string name = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
     }
 }

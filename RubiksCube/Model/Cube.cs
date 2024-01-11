@@ -1,5 +1,7 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -8,17 +10,17 @@ using System.Windows.Media;
 
 namespace RubiksCube
 {
-    internal class Cube
+    internal partial class Cube : ObservableObject
     {
-        public string test;
-
-        public Face FrontFace { get; private set; }
+        [ObservableProperty]
+        public Face frontFace;
         public Face BackFace { get; private set; }
 
         public Face RightFace { get; private set; }
         public Face LeftFace { get; private set; }
 
-        public Face TopFace { get; private set; }
+        [ObservableProperty]
+        public Face topFace;
         public Face BottomFace { get; private set; }
         
         public Cube()
