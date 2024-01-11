@@ -47,7 +47,7 @@ namespace RubiksCube
         {
             for (int i = 0; i < 8; ++i)
             {
-                // Compare sting value of brushes and its neighbour
+                // Compare string value of brushes and its neighbour
                 if ("" + (SolidColorBrush) Plates[i] != "" + (SolidColorBrush) Plates[i + 1]) return false;
             }
             return true;

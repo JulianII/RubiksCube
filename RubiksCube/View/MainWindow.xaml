@@ -8,7 +8,7 @@
         Title="MainWindow" Height="520" Width="450"
         ResizeMode="CanMinimize">
 
-    <Grid Background="Black">
+    <Grid Background="DimGray">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30" />
             <ColumnDefinition Width="30" />
@@ -52,7 +52,7 @@
             <RowDefinition Height="30" />
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
-        
+
         <Rectangle Grid.Column="6" Grid.Row="1" Fill="{Binding C.TopFace.Plates[0]}"/>
         <Rectangle Grid.Column="7" Grid.Row="1" Fill="{Binding C.TopFace.Plates[1]}"/>
         <Rectangle Grid.Column="8" Grid.Row="1" Fill="{Binding C.TopFace.Plates[2]}"/>

@@ -51,7 +51,6 @@ namespace RubiksCube.Model
                 fs.Write(info, 0, info.Length);
                 fs.Close();
             }
-
         }
 
         public Cube Load() 
