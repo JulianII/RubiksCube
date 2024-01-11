@@ -25,9 +25,9 @@ namespace RubiksCube
         {
             InitializeComponent();
 
-            ViewModel vm = new ViewModel(new Cube3by3(new Plate()));
-            DataContext = vm;
-        }
+            ViewModel vm = new ViewModel(new Cube());
 
+            DataContext = vm.c;
+        }
     }
 }

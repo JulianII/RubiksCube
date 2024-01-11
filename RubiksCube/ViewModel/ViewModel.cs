@@ -10,12 +10,11 @@ namespace RubiksCube
     internal partial class ViewModel : ObservableObject
     {
         [ObservableProperty]
-        public ICube c;
+        public Cube c;
 
-        public ViewModel(ICube cube) 
+        public ViewModel(Cube cube) 
         {
-            c = cube;
-            c.MoveLeft(0);          
+            c = cube;    
         }
     }
 }
