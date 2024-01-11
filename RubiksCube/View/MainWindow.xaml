@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="520" Width="450"
         ResizeMode="CanMinimize">
+
     <Grid Background="Black">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30" />
@@ -51,7 +52,7 @@
             <RowDefinition Height="30" />
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
-
+        
         <Rectangle Grid.Column="6" Grid.Row="1" Fill="{Binding C.TopFace.Plates[0]}"/>
         <Rectangle Grid.Column="7" Grid.Row="1" Fill="{Binding C.TopFace.Plates[1]}"/>
         <Rectangle Grid.Column="8" Grid.Row="1" Fill="{Binding C.TopFace.Plates[2]}"/>
@@ -112,20 +113,42 @@
         <Rectangle Grid.Column="11" Grid.Row="7" Fill="{Binding C.RightFace.Plates[7]}"/>
         <Rectangle Grid.Column="12" Grid.Row="7" Fill="{Binding C.RightFace.Plates[8]}"/>
 
-        <Button Grid.Column="6" Grid.Row="4" Command="{Binding MoveUpCommand}" CommandParameter="0"/>
-        <Button Grid.Column="7" Grid.Row="4" Command="{Binding MoveUpCommand}" CommandParameter="1"/>
-        <Button Grid.Column="8" Grid.Row="4" Command="{Binding MoveUpCommand}" CommandParameter="2"/>
+        <TextBlock Grid.Column="1" Grid.Row="5" Text="A" Foreground="{Binding C.BackFace.Plates[0]}" FontSize="18" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Grid.Row="6" Text="B" Foreground="{Binding C.BackFace.Plates[3]}" FontSize="18" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Grid.Row="7" Text="C" Foreground="{Binding C.BackFace.Plates[6]}" FontSize="18" HorizontalAlignment="Center"/>
 
-        <Button Grid.Column="5" Grid.Row="5" Command="{Binding MoveLeftCommand}" CommandParameter="0"/>
-        <Button Grid.Column="5" Grid.Row="6" Command="{Binding MoveLeftCommand}" CommandParameter="1"/>
-        <Button Grid.Column="5" Grid.Row="7" Command="{Binding MoveLeftCommand}" CommandParameter="2"/>
+        <TextBlock Grid.Column="13" Grid.Row="5" Text="A" Foreground="{Binding C.BackFace.Plates[2]}" FontSize="18" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="13" Grid.Row="6" Text="B" Foreground="{Binding C.BackFace.Plates[5]}" FontSize="18" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="13" Grid.Row="7" Text="C" Foreground="{Binding C.BackFace.Plates[8]}" FontSize="18" HorizontalAlignment="Center"/>
 
-        <Button Grid.Column="9" Grid.Row="5" Command="{Binding MoveRightCommand}" CommandParameter="0"/>
-        <Button Grid.Column="9" Grid.Row="6" Command="{Binding MoveRightCommand}" CommandParameter="1"/>
-        <Button Grid.Column="9" Grid.Row="7" Command="{Binding MoveRightCommand}" CommandParameter="2"/>
+        <TextBlock Grid.Column="5" Grid.Row="12" Text="C" Foreground="{Binding C.LeftFace.Plates[6]}" FontSize="18" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="5" Grid.Row="13" Text="B" Foreground="{Binding C.LeftFace.Plates[3]}" FontSize="18" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="5" Grid.Row="14" Text="A" Foreground="{Binding C.LeftFace.Plates[0]}" FontSize="18" HorizontalAlignment="Center"/>
 
-        <Button Grid.Column="6" Grid.Row="8" Command="{Binding MoveDownCommand}" CommandParameter="0"/>
-        <Button Grid.Column="7" Grid.Row="8" Command="{Binding MoveDownCommand}" CommandParameter="1"/>
-        <Button Grid.Column="8" Grid.Row="8" Command="{Binding MoveDownCommand}" CommandParameter="2"/>
+        <TextBlock Grid.Column="9" Grid.Row="12" Text="C" Foreground="{Binding C.RightFace.Plates[8]}" FontSize="18" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="9" Grid.Row="13" Text="B" Foreground="{Binding C.RightFace.Plates[5]}" FontSize="18" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="9" Grid.Row="14" Text="A" Foreground="{Binding C.RightFace.Plates[2]}" FontSize="18" HorizontalAlignment="Center"/>
+
+        <Button Grid.Column="6" Grid.Row="4" Command="{Binding MoveUpCommand}" CommandParameter="0" Content="/\"/>
+        <Button Grid.Column="7" Grid.Row="4" Command="{Binding MoveUpCommand}" CommandParameter="1" Content="/\"/>
+        <Button Grid.Column="8" Grid.Row="4" Command="{Binding MoveUpCommand}" CommandParameter="2" Content="/\"/>
+
+        <Button Grid.Column="5" Grid.Row="5" Command="{Binding MoveLeftCommand}" CommandParameter="0" Content="&lt;"/>
+        <Button Grid.Column="5" Grid.Row="6" Command="{Binding MoveLeftCommand}" CommandParameter="1" Content="&lt;"/>
+        <Button Grid.Column="5" Grid.Row="7" Command="{Binding MoveLeftCommand}" CommandParameter="2" Content="&lt;"/>
+
+        <Button Grid.Column="9" Grid.Row="5" Command="{Binding MoveRightCommand}" CommandParameter="0" Content="&gt;"/>
+        <Button Grid.Column="9" Grid.Row="6" Command="{Binding MoveRightCommand}" CommandParameter="1" Content="&gt;"/>
+        <Button Grid.Column="9" Grid.Row="7" Command="{Binding MoveRightCommand}" CommandParameter="2" Content="&gt;"/>
+
+        <Button Grid.Column="6" Grid.Row="8" Command="{Binding MoveDownCommand}" CommandParameter="0" Content="\/"/>
+        <Button Grid.Column="7" Grid.Row="8" Command="{Binding MoveDownCommand}" CommandParameter="1" Content="\/"/>
+        <Button Grid.Column="8" Grid.Row="8" Command="{Binding MoveDownCommand}" CommandParameter="2" Content="\/"/>
+
+        <Button Grid.Column="2" Grid.Row="2" Command="{Binding SaveCommand}" Content="S"/>
+        <Button Grid.Column="4" Grid.Row="2" Command="{Binding LoadCommand}" Content="L"/>
+
+        <Button Grid.Column="12" Grid.Row="2" Command="{Binding RandomizeCommand}" Content="R"/>
+
     </Grid>
 </Window>

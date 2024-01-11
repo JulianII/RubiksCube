@@ -98,5 +98,27 @@ namespace RubiksCube
             for (int i = 0; i < 3; ++i) BackFace.SetPlateColor(i * 3 + column, BottomFace.GetPlate(i * 3 + column));
             for (int i = 0; i < 3; ++i) BottomFace.SetPlateColor(i * 3 + column, temp.GetPlate(i * 3 + column));
         }
+
+        public void Randomize ()
+        {
+            Random rnd = new Random();
+            for (int i = 0; i < 400; ++i)
+            {
+                int x = rnd.Next(1, 4);
+                int y = rnd.Next(1, 3); 
+
+                switch (x)
+                {
+                    case 1: MoveDown(y);
+                        break;
+                    case 2: MoveUp(y);
+                        break;
+                    case 3: MoveLeft(y);
+                        break;
+                    case 4: MoveRight(y);
+                        break;
+                }
+            }
+        }
     }
 }

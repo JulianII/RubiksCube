@@ -9,6 +9,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 
 namespace RubiksCube
 {
@@ -46,7 +47,8 @@ namespace RubiksCube
         {
             for (int i = 0; i < 8; ++i)
             {
-                if (Plates[i] != Plates[i + 1]) return false;
+                // Compare sting value of brushes and its neighbour
+                if ("" + (SolidColorBrush) Plates[i] != "" + (SolidColorBrush) Plates[i + 1]) return false;
             }
             return true;
         }
