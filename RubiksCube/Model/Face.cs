@@ -8,46 +8,38 @@ using System.Numerics;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using CommunityToolkit.Mvvm.ComponentModel;
+using System.Collections.ObjectModel;
 
 namespace RubiksCube
 {
-    internal partial class Face : INotifyPropertyChanged
+    internal partial class Face : ObservableObject
     {
 
-        private Brush[] plates;
-        public Brush[] Plates
-        {
-            get { return plates; }
-            set
-            {
-                plates = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Plates)));
-            }
-        }
+        [ObservableProperty]
+        public ObservableCollection<Brush> plates;
 
         public Face(Color c)
         {
-            Plates = new Brush[9];
+            Plates = new ObservableCollection<Brush>();
 
             for (int i = 0; i < 9; ++i)
             {
-                Plates[i] = new SolidColorBrush(c);
+                Plates.Add(new SolidColorBrush(c));
             }
         }
 
         public Brush GetPlate(int i)
         {
-            if (i > Plates.Length) throw new ArgumentOutOfRangeException();
+            if (i > Plates.Count) throw new ArgumentOutOfRangeException();
 
             return Plates[i];
         }
 
         public void SetPlateColor(int i, Brush b)
         {
-            if (i > Plates.Length) throw new ArgumentOutOfRangeException();
+            if (i > Plates.Count) throw new ArgumentOutOfRangeException();
 
             Plates[i] = b;
-            NotifyPropertyChanged();
         }
 
         public bool FaceCompleted()
@@ -57,12 +49,6 @@ namespace RubiksCube
                 if (Plates[i] != Plates[i + 1]) return false;
             }
             return true;
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void NotifyPropertyChanged([CallerMemberName] string name = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
     }
 }

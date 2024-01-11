@@ -52,8 +52,6 @@
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
 
-        <Rectangle Grid.Column="5" Grid.Row="1" Fill="{Binding C.TopFace.Plates[0], Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-
         <Rectangle Grid.Column="6" Grid.Row="1" Fill="{Binding C.TopFace.Plates[0]}"/>
         <Rectangle Grid.Column="7" Grid.Row="1" Fill="{Binding C.TopFace.Plates[1]}"/>
         <Rectangle Grid.Column="8" Grid.Row="1" Fill="{Binding C.TopFace.Plates[2]}"/>
@@ -114,9 +112,9 @@
         <Rectangle Grid.Column="11" Grid.Row="7" Fill="{Binding C.RightFace.Plates[7]}"/>
         <Rectangle Grid.Column="12" Grid.Row="7" Fill="{Binding C.RightFace.Plates[8]}"/>
 
-        <Button Grid.Column="6" Grid.Row="4" Command="{Binding MoveUpCommand}"/>
-        <Button Grid.Column="7" Grid.Row="4"/>
-        <Button Grid.Column="8" Grid.Row="4"/>
+        <Button Grid.Column="6" Grid.Row="4" Command="{Binding MoveUpCommand}" CommandParameter="0"/>
+        <Button Grid.Column="7" Grid.Row="4" Command="{Binding MoveUpCommand}" CommandParameter="1"/>
+        <Button Grid.Column="8" Grid.Row="4" Command="{Binding MoveUpCommand}" CommandParameter="2"/>
 
         <Button Grid.Column="5" Grid.Row="5"/>
         <Button Grid.Column="5" Grid.Row="6"/>

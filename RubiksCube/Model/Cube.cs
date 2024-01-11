@@ -4,23 +4,22 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
 
 namespace RubiksCube
 {
-    internal partial class Cube : ObservableObject
+    internal partial class Cube 
     {
-        [ObservableProperty]
-        public Face frontFace;
+        public Face FrontFace { get; private set; }
         public Face BackFace { get; private set; }
 
         public Face RightFace { get; private set; }
         public Face LeftFace { get; private set; }
 
-        [ObservableProperty]
-        public Face topFace;
+        public Face TopFace { get; private set; }
         public Face BottomFace { get; private set; }
         
         public Cube()

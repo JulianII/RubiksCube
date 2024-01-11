@@ -23,10 +23,27 @@ namespace RubiksCube
         }
 
         [RelayCommand]
-        public void MoveUp()
+        public void MoveUp(string s)
         {
-            C.MoveUp(0);
-            Debug.WriteLine($"FrontFace Plate 0: {C.FrontFace.Plates[0]}");
+            C.MoveUp(int.Parse(s));
+        }
+
+        [RelayCommand]
+        public void MoveDown(string s)
+        {
+            C.MoveDown(int.Parse(s));
+        }
+
+        [RelayCommand]
+        public void MoveLeft(string s)
+        {
+            C.MoveLeft(int.Parse(s));
+        }
+
+        [RelayCommand]
+        public void MoveRight(string s)
+        {
+            C.MoveRight(int.Parse(s));
         }
 
     }
