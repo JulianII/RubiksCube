@@ -72,7 +72,7 @@ namespace RubiksCube
         public void MoveUp(int column)
         {
             if (column == 0) RotateFace(LeftFace, false);
-            if (column == 2) RotateFace(RightFace, false);
+            if (column == 2) RotateFace(RightFace, true);
 
             Face temp = new Face(Color.FromRgb(0, 0, 0));
             for (int i = 0; i < 3; ++i) temp.SetPlateColor(i * 3 + column, FrontFace.GetPlate(i * 3 + column));
@@ -99,8 +99,8 @@ namespace RubiksCube
 
         public void MoveDown(int column)
         {
-            if (column == 0) RotateFace(TopFace, false);
-            if (column == 2) RotateFace(BottomFace, false);
+            if (column == 0) RotateFace(LeftFace, true);
+            if (column == 2) RotateFace(RightFace, false);
 
             Face temp = new Face(Color.FromRgb(0, 0, 0));
             for (int i = 0; i < 3; ++i) temp.SetPlateColor(i * 3 + column, FrontFace.GetPlate(i * 3 + column));
