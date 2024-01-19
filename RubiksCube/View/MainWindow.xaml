@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="520" Width="450"
         ResizeMode="CanMinimize">
-
+    
     <Grid Background="DimGray">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30" />

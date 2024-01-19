@@ -17,7 +17,7 @@ namespace RubiksCube
     {
 
         [ObservableProperty]
-        public ObservableCollection<Brush> plates;
+        private ObservableCollection<Brush> plates;
 
         public Face(Color c)
         {

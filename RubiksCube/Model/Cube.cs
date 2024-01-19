@@ -44,7 +44,7 @@ namespace RubiksCube
         public bool CubeCompleted()
         {
             if (!FrontFace.FaceCompleted()) return false;
-            if (!FrontFace.FaceCompleted()) return false;
+            if (!BackFace.FaceCompleted()) return false;
 
             if (!RightFace.FaceCompleted()) return false;
             if (!LeftFace.FaceCompleted()) return false;
