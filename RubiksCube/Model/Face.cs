@@ -39,20 +39,6 @@ namespace RubiksCube
             }
         }
 
-        public Brush GetPlate(int i)
-        {
-            if (i > Plates.Count) throw new ArgumentOutOfRangeException();
-
-            return Plates[i];
-        }
-
-        public void SetPlateColor(int i, Brush b)
-        {
-            if (i > Plates.Count) throw new ArgumentOutOfRangeException();
-
-            Plates[i] = b;
-        }
-
         public bool FaceCompleted()
         {
             for (int i = 0; i < 8; ++i)

@@ -26,7 +26,8 @@ namespace RubiksCube
             C = cube;
             C = sm.Load();
 
-            if (C == null) { 
+            if (C == null) 
+            { 
                 C = new Cube(); 
                 C.Randomize();
                 sm.Save(C);

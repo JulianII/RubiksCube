@@ -7,8 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="520" Width="450"
         ResizeMode="CanMinimize">
-    
+
     <Grid Background="DimGray">
+        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30" />
             <ColumnDefinition Width="30" />
@@ -52,6 +54,7 @@
             <RowDefinition Height="30" />
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
+
 
         <Rectangle Grid.Column="6" Grid.Row="1" Fill="{Binding C.TopFace.Plates[0]}"/>
         <Rectangle Grid.Column="7" Grid.Row="1" Fill="{Binding C.TopFace.Plates[1]}"/>
@@ -149,6 +152,5 @@
         <Button Grid.Column="4" Grid.Row="2" Command="{Binding LoadCommand}" Content="L"/>
 
         <Button Grid.Column="12" Grid.Row="2" Command="{Binding RandomizeCommand}" Content="R"/>
-
     </Grid>
 </Window>
