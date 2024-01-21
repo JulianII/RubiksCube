@@ -75,12 +75,12 @@ namespace RubiksCube
             if (column == 2) RotateFace(RightFace, true);
 
             Face temp = new Face(Color.FromRgb(0, 0, 0));
-            for (int i = 0; i < 3; ++i) temp.Plates[column * 3 + i] = FrontFace.Plates[column * 3 + i];
+            for (int i = 0; i < 3; ++i) temp.Plates[column + 3 * i] = FrontFace.Plates[column + 3 * i];
 
-            for (int i = 0; i < 3; ++i) FrontFace.Plates[column * 3 + i] = BottomFace.Plates[column * 3 + i];
-            for (int i = 0; i < 3; ++i) BottomFace.Plates[column * 3 + i] = BackFace.Plates[column * 3 + i];
-            for (int i = 0; i < 3; ++i) BackFace.Plates[column * 3 + i] = TopFace.Plates[column * 3 + i];
-            for (int i = 0; i < 3; ++i) TopFace.Plates[column * 3 + i] = temp.Plates[column * 3 + i];
+            for (int i = 0; i < 3; ++i) FrontFace.Plates[column + 3 * i] = BottomFace.Plates[column + 3 * i];
+            for (int i = 0; i < 3; ++i) BottomFace.Plates[column + 3 * i] = BackFace.Plates[column + 3 * i];
+            for (int i = 0; i < 3; ++i) BackFace.Plates[column + 3 * i] = TopFace.Plates[column + 3 * i];
+            for (int i = 0; i < 3; ++i) TopFace.Plates[column + 3 * i] = temp.Plates[column + 3 * i];
         }
 
         public void MoveRight(int row)
@@ -103,12 +103,12 @@ namespace RubiksCube
             if (column == 2) RotateFace(RightFace, false);
 
             Face temp = new Face(Color.FromRgb(0, 0, 0));
-            for (int i = 0; i < 3; ++i) temp.Plates[column * 3 + i] = FrontFace.Plates[column * 3 + i];
+            for (int i = 0; i < 3; ++i) temp.Plates[column + 3 * i] = FrontFace.Plates[column + 3 * i];
 
-            for (int i = 0; i < 3; ++i) FrontFace.Plates[column * 3 + i] = TopFace.Plates[column * 3 + i];
-            for (int i = 0; i < 3; ++i) TopFace.Plates[column * 3 + i] = BackFace.Plates[column * 3 + i];
-            for (int i = 0; i < 3; ++i) BackFace.Plates[column * 3 + i] = BottomFace.Plates[column * 3 + i];
-            for (int i = 0; i < 3; ++i) BottomFace.Plates[column * 3 + i] = temp.Plates[column * 3 + i];
+            for (int i = 0; i < 3; ++i) FrontFace.Plates[column + 3 * i] = TopFace.Plates[column + 3 * i];
+            for (int i = 0; i < 3; ++i) TopFace.Plates[column + 3 * i] = BackFace.Plates[column + 3 * i];
+            for (int i = 0; i < 3; ++i) BackFace.Plates[column + 3 * i] = BottomFace.Plates[column + 3 * i];
+            for (int i = 0; i < 3; ++i) BottomFace.Plates[column + 3 * i] = temp.Plates[column + 3 * i];
         }
 
         private void RotateFace(Face f, bool rotRight)
